@@ -1,14 +1,14 @@
 package com.example.bishuliko;
 
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Main2Activity extends AppCompatActivity {
+import android.os.Bundle;
+
+public class MenuWindow extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_menu_window);
     }
 }
