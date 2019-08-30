@@ -13,7 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MenuWindow"></activity>
+        <activity android:name=".SearchRandom"></activity>
+        <activity android:name=".SearchCategory" />
+        <activity android:name=".SearchName" />
+        <activity android:name=".MenuWindow" />
         <activity android:name=".Main2Activity" />
         <activity android:name=".MainActivity">
             <intent-filter>

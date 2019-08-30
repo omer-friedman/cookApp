@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "552465725416",
+    "firebase_url": "https://bishuliko-61478.firebaseio.com",
+    "project_id": "bishuliko-61478",
+    "storage_bucket": "bishuliko-61478.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:552465725416:android:58907bc79bdb006b",
+        "android_client_info": {
+          "package_name": "com.example.bishuliko"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "552465725416-14gfsjig7dj0tpu8c17pio4fvkpkh5o4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bishuliko",
+            "certificate_hash": "9a8c271eff7271ec123c7f5bb2f5c50724497f48"
+          }
+        },
+        {
+          "client_id": "552465725416-ct8o18pg9svgea2l6esa3v3tqrt3oo8c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4OsgYTL88TjdfXtWrjd6YBH5I6KD6IHE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "552465725416-ct8o18pg9svgea2l6esa3v3tqrt3oo8c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

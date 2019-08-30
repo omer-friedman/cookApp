@@ -12,17 +12,7 @@
         android:id="@+id/button_name"
         android:text="search by name"
         android:textSize="30dp"
-        />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/button_letter"
-        android:layout_below="@+id/button_name"
-        android:text="search by first letter"
-        android:textSize="30dp"
-
+        android:onClick="search_name"
         />
 
     <Button
@@ -30,10 +20,10 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:id="@+id/button_random"
-        android:layout_below="@+id/button_letter"
+        android:layout_below="@+id/button_name"
         android:text="random meal"
         android:textSize="30dp"
-
+        android:onClick="search_random"
         />
 
     <Button
@@ -44,7 +34,7 @@
         android:layout_below="@+id/button_random"
         android:text="search by category"
         android:textSize="30dp"
-
+        android:onClick="search_category"
         />
 
 
