@@ -5,18 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DisplayRecipe">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scroll_view">
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/meal_title"
+        android:textSize="50dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true">
+    </TextView>
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:id="@+id/image_recipe">
+        android:id="@+id/image_recipe"
+        android:layout_below="@+id/meal_title">
     </ImageView>
+
     <TextView
         android:layout_width="wrap_content"
+        android:layout_below="@+id/image_recipe"
         android:layout_height="wrap_content"
         android:text="Ingredients:"
         android:id="@+id/ingredients_title"
-        android:layout_below="@+id/image_recipe"
         android:textSize="40dp">
     </TextView>
 
@@ -32,19 +49,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/instructions_title"
-        android:layout_below="@+id/ingredients"
-        android:textSize="40dp">
+        android:textSize="40dp"
+        android:text="Instructions:"
+        android:layout_below="@+id/ingredients">
     </TextView>
-
-
-    <TextView
+        <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/instructions"
-        android:text="Instructions:"
-        android:layout_below="@+id/instructions_title"
-        android:textSize="30dp">
-    </TextView>
+        android:textSize="30dp"
+        android:layout_below="@+id/instructions_title">
+        </TextView>
+</RelativeLayout>
+    </ScrollView>
 
 
 </RelativeLayout>

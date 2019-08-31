@@ -2,9 +2,12 @@ package com.example.bishuliko;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -19,8 +22,13 @@ public class DisplayRecipe extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_recipe);
         JSONObject json = null;
+//        Context context = getApplicationContext();
+//        Toast toast = Toast.makeText(context, "11111", 10);
+//        toast.show();
         if(getIntent().hasExtra("json")) {
             try {
+//                toast = Toast.makeText(context, "22222", 10);
+//                toast.show();
                 json = new JSONObject(getIntent().getStringExtra("json"));
                 parse_json_args(json);
             } catch (JSONException e) {
@@ -30,15 +38,18 @@ public class DisplayRecipe extends AppCompatActivity {
         }
 
     public void parse_json_args(JSONObject json){
-        TextView tv_ing = findViewById(R.id.ingredients);
-        TextView tv_ins = findViewById(R.id.instructions);
+        TextView tv_title = findViewById(R.id.meal_title);
+        TextView tv_ingredients = findViewById(R.id.ingredients);
+        TextView tv_instructions = findViewById(R.id.instructions);
         try {
+            String meal_title = json.getString("strMeal");
             String img_url = json.getString("strMealThumb");
             String ingredients = get_ingredients(json);
             String instructions = json.getString("strInstructions");
             load_image(img_url);
-            tv_ing.setText(ingredients);
-            tv_ins.setText(instructions);
+            tv_title.setText(meal_title);
+            tv_ingredients.setText(ingredients);
+            tv_instructions.setText(instructions);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -59,7 +70,7 @@ public class DisplayRecipe extends AppCompatActivity {
                 String measure = json.getString(prefix_mea+i);
                 if(ingredient.length() == 0)
                     break;
-                ingredients += ingredient + " " + measure + "\n";
+                ingredients += ingredient + " - " + measure + "\n";
             } catch (JSONException e) {
                 return ingredients;
             }

@@ -13,9 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".SigninPage"></activity>
+        <activity android:name=".SignupPage" />
         <activity
             android:name=".ui.login.LoginActivity"
-            android:label="@string/title_activity_login"></activity>
+            android:label="@string/title_activity_login" />
         <activity android:name=".DisplayRecipe" />
         <activity android:name=".SearchRandom" />
         <activity android:name=".SearchCategory" />

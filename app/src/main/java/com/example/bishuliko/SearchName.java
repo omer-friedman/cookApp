@@ -2,12 +2,14 @@ package com.example.bishuliko;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -34,12 +36,13 @@ public class SearchName extends AppCompatActivity {
                 TextView tv = findViewById(R.id.recipe_view_name);
                 super.onSuccess(statusCode, headers, response);
                 try {
-                    et.setVisibility(View.GONE);
-                    b.setVisibility(View.GONE);
                     JSONArray recipes = response.getJSONArray("meals");
-                    tv.setText(recipes.getJSONObject(0).toString());
                     Intent intent = new Intent(SearchName.this, DisplayRecipe.class);
-                    intent.putExtra("JSON", recipes.get(0).toString());
+                    String json = recipes.get(0).toString();
+//                    Context context = getApplicationContext();
+//                    Toast toast = Toast.makeText(context, json, 10);
+//                    toast.show();
+                    intent.putExtra("json", json);
                     startActivity(intent);
                 } catch (JSONException e) {
                     tv.setText("No Recipes Found! Sorry..");
