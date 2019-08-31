@@ -11,25 +11,22 @@ import com.google.firebase.auth.FirebaseUser;
 
 
 public class MainActivity extends AppCompatActivity {
-    private FirebaseAuth mAuth;
+//    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mAuth = FirebaseAuth.getInstance();
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        updateUI(currentUser);
+//        mAuth = FirebaseAuth.getInstance();
     }
 
     public void go_to_menu(View view) {
         Intent myIntent = new Intent(MainActivity.this, MenuWindow.class);
+        MainActivity.this.startActivity(myIntent);
+    }
+
+    public void display_recipe(View view) {
+        Intent myIntent = new Intent(MainActivity.this, DisplayRecipe.class);
         MainActivity.this.startActivity(myIntent);
     }
 }
