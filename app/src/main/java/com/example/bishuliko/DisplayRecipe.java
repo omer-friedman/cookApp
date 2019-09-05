@@ -3,9 +3,15 @@ package com.example.bishuliko;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,20 +21,22 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+
 public class DisplayRecipe extends AppCompatActivity {
+    LinearLayout linearLayout;
+    CheckBox checkBox;
+    ArrayList<String> al;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_recipe);
+        linearLayout = findViewById(R.id.linear_ingredients);
+        al = new ArrayList<String>();
         JSONObject json = null;
-//        Context context = getApplicationContext();
-//        Toast toast = Toast.makeText(context, "11111", 10);
-//        toast.show();
         if(getIntent().hasExtra("json")) {
             try {
-//                toast = Toast.makeText(context, "22222", 10);
-//                toast.show();
                 json = new JSONObject(getIntent().getStringExtra("json"));
                 parse_json_args(json);
             } catch (JSONException e) {
@@ -39,20 +47,25 @@ public class DisplayRecipe extends AppCompatActivity {
 
     public void parse_json_args(JSONObject json){
         TextView tv_title = findViewById(R.id.meal_title);
-        TextView tv_ingredients = findViewById(R.id.ingredients);
         TextView tv_instructions = findViewById(R.id.instructions);
         try {
             String meal_title = json.getString("strMeal");
             String img_url = json.getString("strMealThumb");
-            String ingredients = get_ingredients(json);
+            get_ingredients(json);
             String instructions = json.getString("strInstructions");
+            instructions = modify_instructions(instructions);
             load_image(img_url);
             tv_title.setText(meal_title);
-            tv_ingredients.setText(ingredients);
             tv_instructions.setText(instructions);
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+    public String modify_instructions(String instructions){
+        String[] parts = instructions.split("\r\n");
+        String ret_str = String.join("\r\n\r\n", parts);
+        return ret_str;
     }
 
     public void load_image(String url){
@@ -60,7 +73,7 @@ public class DisplayRecipe extends AppCompatActivity {
         Picasso.get().load(url).into(iv);
     }
 
-    public String get_ingredients(JSONObject json){
+    public void get_ingredients(JSONObject json){
         String ingredients = "";
         String prefix_ing = "strIngredient";
         String prefix_mea = "strMeasure";
@@ -70,12 +83,16 @@ public class DisplayRecipe extends AppCompatActivity {
                 String measure = json.getString(prefix_mea+i);
                 if(ingredient.length() == 0)
                     break;
-                ingredients += ingredient + " - " + measure + "\n";
-            } catch (JSONException e) {
-                return ingredients;
-            }
+                ingredients = ingredient + " - " + measure;
+                al.add(ingredients);
+                checkBox = new CheckBox(this);
+                checkBox.setId(i);
+                checkBox.setText(ingredients);
+                checkBox.setTextSize(30);
+                checkBox.setButtonTintList(ColorStateList.valueOf(Color.parseColor("#CC0000")));
+                linearLayout.addView(checkBox);
+            } catch (JSONException e) {}
         }
-        return ingredients;
     }
 
 }

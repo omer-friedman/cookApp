@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_recipe"
     tools:context=".DisplayRecipe">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -32,34 +34,37 @@
         android:layout_width="wrap_content"
         android:layout_below="@+id/image_recipe"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:text="Ingredients:"
         android:id="@+id/ingredients_title"
         android:textSize="40dp">
     </TextView>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/ingredients"
+    <LinearLayout
         android:layout_below="@+id/ingredients_title"
-        android:textSize="30dp">
-    </TextView>
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/linear_ingredients"
+        android:orientation="vertical">
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/instructions_title"
+        android:layout_centerHorizontal="true"
         android:textSize="40dp"
         android:text="Instructions:"
-        android:layout_below="@+id/ingredients">
+        android:layout_below="@+id/linear_ingredients">
     </TextView>
-        <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/instructions"
-        android:textSize="30dp"
-        android:layout_below="@+id/instructions_title">
-        </TextView>
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+    android:id="@+id/instructions"
+    android:textSize="30dp"
+    android:layout_below="@+id/instructions_title">
+    </TextView>
 </RelativeLayout>
     </ScrollView>
 
