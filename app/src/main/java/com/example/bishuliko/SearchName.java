@@ -37,12 +37,8 @@ public class SearchName extends AppCompatActivity {
                 super.onSuccess(statusCode, headers, response);
                 try {
                     JSONArray recipes = response.getJSONArray("meals");
-                    Intent intent = new Intent(SearchName.this, DisplayRecipe.class);
-                    String json = recipes.get(0).toString();
-//                    Context context = getApplicationContext();
-//                    Toast toast = Toast.makeText(context, json, 10);
-//                    toast.show();
-                    intent.putExtra("json", json);
+                    Intent intent = new Intent(SearchName.this, RecipesSelection.class);
+                    intent.putExtra("json", recipes.toString());
                     startActivity(intent);
                 } catch (JSONException e) {
                     tv.setText("No Recipes Found! Sorry..");

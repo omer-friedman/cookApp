@@ -16,6 +16,8 @@
     android:layout_height="match_parent">
     <TextView
         android:layout_width="match_parent"
+        android:textColor="#000000"
+        android:textStyle="bold"
         android:layout_height="match_parent"
         android:id="@+id/meal_title"
         android:textSize="50dp"
@@ -34,9 +36,12 @@
         android:layout_width="wrap_content"
         android:layout_below="@+id/image_recipe"
         android:layout_height="wrap_content"
+        android:textColor="#000000"
         android:layout_centerHorizontal="true"
         android:text="Ingredients:"
         android:id="@+id/ingredients_title"
+        android:textStyle="bold"
+
         android:textSize="40dp">
     </TextView>
 
@@ -52,15 +57,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/instructions_title"
+        android:textColor="#000000"
         android:layout_centerHorizontal="true"
         android:textSize="40dp"
         android:text="Instructions:"
+        android:textStyle="bold"
         android:layout_below="@+id/linear_ingredients">
     </TextView>
     <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+    android:textColor="#000000"
+    android:layout_centerHorizontal="true"
     android:id="@+id/instructions"
     android:textSize="30dp"
     android:layout_below="@+id/instructions_title">

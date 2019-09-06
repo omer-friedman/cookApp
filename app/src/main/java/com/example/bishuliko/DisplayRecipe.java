@@ -42,7 +42,7 @@ public class DisplayRecipe extends AppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-         }
+          }
         }
 
     public void parse_json_args(JSONObject json){
