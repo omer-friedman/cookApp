@@ -25,8 +25,4 @@ public class MainActivity extends AppCompatActivity {
         MainActivity.this.startActivity(myIntent);
     }
 
-    public void display_recipe(View view) {
-        Intent myIntent = new Intent(MainActivity.this, DisplayRecipe.class);
-        MainActivity.this.startActivity(myIntent);
-    }
 }

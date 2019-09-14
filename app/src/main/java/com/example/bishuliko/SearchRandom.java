@@ -2,6 +2,7 @@ package com.example.bishuliko;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -28,7 +29,10 @@ public class SearchRandom extends AppCompatActivity {
                 super.onSuccess(statusCode, headers, response);
                 try {
                     JSONArray recipes = response.getJSONArray("meals");
-                    tv.setText(recipes.getJSONObject(0).toString());
+                    String json_str = recipes.getJSONObject(0).toString();
+                    Intent intent = new Intent(SearchRandom.this, DisplayRecipe.class);
+                    intent.putExtra("json", json_str);
+                    startActivity(intent);
                 } catch (JSONException e) {
                     tv.setText("No Recipes Found! Sorry..");
                 }

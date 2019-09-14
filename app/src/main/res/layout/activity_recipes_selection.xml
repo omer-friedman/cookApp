@@ -4,12 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecipesSelection">
+    tools:context=".RecipesSelection"
+    android:orientation="vertical"
+    android:background="@drawable/light_blue">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select your recipe..."
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:gravity="center"
+        >
+
+    </TextView>
 <ListView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     android:id="@+id/list_view">
-
 </ListView>
 
 </LinearLayout>

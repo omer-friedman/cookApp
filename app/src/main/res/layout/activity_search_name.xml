@@ -3,34 +3,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back_search"
     tools:context=".SearchName">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Your Recipe..."
+        android:id="@+id/search_title"
+        android:layout_marginTop="30dp"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        android:layout_centerHorizontal="true">
+
+    </TextView>
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/search_title"
+    android:layout_marginTop="10dp"
+    android:src="@drawable/not_found"
+    android:id="@+id/rcp_not_found">
+
+</ImageView>
 
 <EditText
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_centerHorizontal="true"
     android:layout_centerVertical="true"
-    android:background="@android:color/background_light"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/back_search"
+    android:textColor="#000000"
     android:hint="Enter name of meal here"
     android:textSize="30dp"
+    android:gravity="center"
     android:id="@+id/input">
 </EditText>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="get recipe"
+        android:text="       get recipe       "
         android:id="@+id/get_recipe"
+        android:background="#ffcc99"
+        android:textSize="20dp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/input"
+        android:layout_marginTop="10dp"
         android:onClick="get_json">
     </Button>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/recipe_view_name"
-        android:textSize="30dp">
-    </TextView>
 </RelativeLayout>

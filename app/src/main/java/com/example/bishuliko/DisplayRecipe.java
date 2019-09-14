@@ -81,7 +81,7 @@ public class DisplayRecipe extends AppCompatActivity {
             try {
                 String ingredient = json.getString(prefix_ing+i);
                 String measure = json.getString(prefix_mea+i);
-                if(ingredient.length() == 0)
+                if(ingredient.length() == 0 || ingredient.equals("null"))
                     break;
                 ingredients = ingredient + " - " + measure;
                 al.add(ingredients);

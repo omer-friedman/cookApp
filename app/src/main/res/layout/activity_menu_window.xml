@@ -1,41 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuWindow">
+    tools:context=".MenuWindow"
+    android:orientation="vertical">
 
-    <Button
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/button_name"
-        android:text="search by name"
-        android:textSize="30dp"
-        android:onClick="search_name"
-        />
+        android:layout_weight="1">
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/search"
+            android:onClick="search_name"
+            android:id="@+id/search_img">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/button_random"
-        android:layout_below="@+id/button_name"
-        android:text="random meal"
-        android:textSize="30dp"
-        android:onClick="search_random"
-        />
+        </ImageButton>
 
-    <Button
-        android:layout_width="wrap_content"
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/button_category"
-        android:layout_below="@+id/button_random"
-        android:text="search by category"
-        android:textSize="30dp"
+        android:layout_weight="1">
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/random"
+            android:id="@+id/random_img"
+            android:onClick="search_random">
+
+        </ImageButton>
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1">
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/categories"
         android:onClick="search_category"
-        />
+        android:id="@+id/categories_img">
 
+    </ImageButton>
 
-</RelativeLayout>
+</LinearLayout>
+
+</LinearLayout>

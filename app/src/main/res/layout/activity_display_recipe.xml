@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_recipe"
+    android:background="@drawable/background_recipe1"
     tools:context=".DisplayRecipe">
 
     <ScrollView
@@ -28,6 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
         android:id="@+id/image_recipe"
         android:layout_below="@+id/meal_title">
     </ImageView>
@@ -36,6 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_below="@+id/image_recipe"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:textColor="#000000"
         android:layout_centerHorizontal="true"
         android:text="Ingredients:"
@@ -49,6 +51,7 @@
         android:layout_below="@+id/ingredients_title"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
         android:id="@+id/linear_ingredients"
         android:orientation="vertical">
     </LinearLayout>
@@ -57,6 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/instructions_title"
+        android:layout_marginTop="5dp"
         android:textColor="#000000"
         android:layout_centerHorizontal="true"
         android:textSize="40dp"
@@ -69,6 +73,8 @@
     android:layout_height="wrap_content"
     android:textColor="#000000"
     android:layout_centerHorizontal="true"
+    android:layout_marginTop="5dp"
+    android:layout_marginStart="10dp"
     android:id="@+id/instructions"
     android:textSize="30dp"
     android:layout_below="@+id/instructions_title">
