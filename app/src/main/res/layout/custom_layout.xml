@@ -3,21 +3,21 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:layout_width="120dp"
-        android:layout_height="100dp"
-        android:src="@drawable/side"
-        android:id="@+id/list_img">
-    </ImageView>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/list_text"
-        android:layout_marginTop="25dp"
-        android:textSize="40dp"
-        android:layout_centerHorizontal="true"
-        android:text="side">
+<!--    <ImageView-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:src="@drawable/side"-->
+<!--        android:id="@+id/list_img">-->
+<!--    </ImageView>-->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/list_text"-->
+<!--        android:layout_marginTop="25dp"-->
+<!--        android:textSize="40dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:text="side">-->
 
-    </TextView>
+<!--    </TextView>-->
 
 </RelativeLayout>

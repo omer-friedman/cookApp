@@ -45,7 +45,6 @@ public class MenuWindow extends AppCompatActivity {
     }
 
     public void search_category(View view) {
-
         Intent myIntent = new Intent(MenuWindow.this, SearchCategory.class);
         MenuWindow.this.startActivity(myIntent);
     }

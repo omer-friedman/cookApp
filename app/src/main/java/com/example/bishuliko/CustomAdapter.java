@@ -24,18 +24,18 @@ public class CustomAdapter extends ArrayAdapter<ListCategoryView> {
         mResource = resource;
     }
 
-    @NonNull
-    @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        String category = getItem(position).getCategory();
-        int img = getItem(position).getImg();
-        ListCategoryView listCategoryView = new ListCategoryView(img, category);
-        LayoutInflater inflater = LayoutInflater.from(mContext);
-        convertView = inflater.inflate(mResource,parent,false);
-        TextView textView = convertView.findViewById(R.id.list_text);
-        ImageView imageView = convertView.findViewById(R.id.list_img);
-        textView.setText(category);
-        imageView.setImageResource(img);
-        return convertView;
-    }
+//    @NonNull
+//    @Override
+//    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+//        String category = getItem(position).getCategory();
+//        int img = getItem(position).getImg();
+//        ListCategoryView listCategoryView = new ListCategoryView(img, category);
+//        LayoutInflater inflater = LayoutInflater.from(mContext);
+//        convertView = inflater.inflate(mResource,parent,false);
+//        TextView textView = convertView.findViewById(R.id.list_text);
+//        ImageView imageView = convertView.findViewById(R.id.list_img);
+//        textView.setText(category);
+//        imageView.setImageResource(img);
+//        return convertView;
+//    }
 }
