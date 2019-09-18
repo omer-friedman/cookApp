@@ -16,4 +16,6 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="categories_banner">categories_banner</string>
+    <string name="facebook_application_id" translatable="false">376616713267159</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fb376616713267159</string>
 </resources>
