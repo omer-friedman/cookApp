@@ -4,7 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:gravity="center"
+        android:layout_above="@+id/password"
+        android:background="#00000000"
+        android:paddingBottom="5dp"
+        />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_above="@+id/button_menu"
+        android:gravity="center"
+        android:background="#00000000"
+        android:paddingBottom="5dp"
+        />
 
     <ImageButton
         android:id="@+id/button_menu"
@@ -15,6 +40,18 @@
         android:src="@drawable/bishuliko_logo"
         android:background="?android:selectableItemBackground"
         android:onClick="go_to_menu"
+        />
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textSize="20sp"
+        android:layout_below="@+id/button_menu"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:onClick="register"
         />
 
 </RelativeLayout>
