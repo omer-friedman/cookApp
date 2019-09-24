@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.bishuliko">
-
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -13,6 +12,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".RecipesSelection" />
+        <activity android:name=".DisplayFavorites" />
         <activity android:name=".DisplayRecipe" />
         <activity android:name=".SearchRandom" />
         <activity android:name=".SearchCategory" />

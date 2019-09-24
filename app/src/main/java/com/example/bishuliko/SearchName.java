@@ -33,7 +33,6 @@ public class SearchName extends AppCompatActivity {
 
     public void get_json(View view) {
         final EditText et = findViewById(R.id.input);
-        final Button b = findViewById(R.id.get_recipe);
         client.get("https://www.themealdb.com/api/json/v1/1/search.php?s=" + et.getText(), new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
@@ -46,6 +45,8 @@ public class SearchName extends AppCompatActivity {
                     startActivity(intent);
                 } catch (JSONException e) {
                     msg.setVisibility(View.VISIBLE);
+                    EditText et_search_recipe = findViewById(R.id.input);
+                    et_search_recipe.setText("");
                 }
             }
         });

@@ -3,25 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back_search"
+    android:background="@drawable/background1"
     tools:context=".SearchName">
-    <TextView
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Search Your Recipe..."
         android:id="@+id/search_title"
-        android:layout_marginTop="30dp"
-        android:textSize="30dp"
-        android:textColor="#000000"
+        android:src="@drawable/search_recipe"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true">
 
-    </TextView>
+    </ImageView>
 <ImageView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
     android:layout_below="@+id/search_title"
     android:layout_marginTop="10dp"
-    android:src="@drawable/not_found"
+    android:src="@drawable/no_recipe_found"
     android:id="@+id/rcp_not_found">
 
 </ImageView>
@@ -30,28 +30,24 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_centerHorizontal="true"
-    android:layout_centerVertical="true"
     android:layout_marginTop="10dp"
-    android:background="@drawable/back_search"
+    android:layout_below="@+id/rcp_not_found"
     android:textColor="#000000"
-    android:hint="Enter name of meal here"
+    android:hint="Recipe name..."
     android:textSize="30dp"
     android:gravity="center"
     android:id="@+id/input">
 </EditText>
 
-    <Button
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="       get recipe       "
         android:id="@+id/get_recipe"
-        android:background="#ffcc99"
-        android:textSize="20dp"
+        android:src="@drawable/get_recipe"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/input"
-        android:layout_marginTop="10dp"
+        android:background="?android:selectableItemBackground"
         android:onClick="get_json">
-    </Button>
+    </ImageButton>
 
 </RelativeLayout>

@@ -66,16 +66,10 @@ public class SearchCategory extends AppCompatActivity {
                     for (int i = 0; i < categories_json.length(); i++) {
                         JSONObject item = categories_json.getJSONObject(i);
                         String name = item.getString("strCategory");
-                        System.out.println("category: "+name);
                         String image_url = item.getString("strCategoryThumb");
                         categories.add(new ListCategoryView(name, image_url));
                     }
                     fill_categories_table(categories);
-//                    final ListView listView = findViewById(R.id.category_list);
-//                    Intent intent = new Intent(SearchCategory.this, RecipesSelection.class);
-//                    intent.putExtra("from_category", "");
-//                    intent.putExtra("json", recipes.toString());
-//                    startActivity(intent);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -105,7 +99,6 @@ public class SearchCategory extends AppCompatActivity {
                 }
                 String image_url = categories.get(cnt_cur_category).getImgUrl();
                 String categorie_name = categories.get(cnt_cur_category).getCategory();
-                System.out.println("URL: "+image_url);
                 TextView tv_category = new TextView(this);
                 tv_category.setText(categorie_name);
                 tv_category.setLayoutParams(new TableRow.LayoutParams(
@@ -121,7 +114,7 @@ public class SearchCategory extends AppCompatActivity {
                         TableRow.LayoutParams.MATCH_PARENT,
                         1.0f
                 ));
-                Picasso.get().load(image_url).placeholder(R.mipmap.ic_launcher)
+                Picasso.get().load(image_url)
                         .error(R.mipmap.ic_launcher)
                         .into(btn_category, new com.squareup.picasso.Callback() {
                             @Override

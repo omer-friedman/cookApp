@@ -1,86 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_recipe1"
+    android:background="#999999"
     tools:context=".DisplayRecipe">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/scroll_view">
-    <RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:layout_width="match_parent"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        android:layout_height="match_parent"
-        android:id="@+id/meal_title"
-        android:textSize="50dp"
-        android:gravity="center"
-        android:layout_centerHorizontal="true">
-    </TextView>
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:id="@+id/image_recipe"
-        android:layout_below="@+id/meal_title">
-    </ImageView>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_below="@+id/image_recipe"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:textColor="#000000"
-        android:layout_centerHorizontal="true"
-        android:text="Ingredients:"
-        android:id="@+id/ingredients_title"
-        android:textStyle="bold"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        android:textSize="40dp">
-    </TextView>
+            <ImageView
+                android:id="@+id/image_recipe"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:scaleType="fitXY"/>
 
-    <LinearLayout
-        android:layout_below="@+id/ingredients_title"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="5dp"
-        android:id="@+id/linear_ingredients"
-        android:orientation="vertical">
-    </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/instructions_title"
-        android:layout_marginTop="5dp"
-        android:textColor="#000000"
-        android:layout_centerHorizontal="true"
-        android:textSize="40dp"
-        android:text="Instructions:"
-        android:textStyle="bold"
-        android:layout_below="@+id/linear_ingredients">
-    </TextView>
-    <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textColor="#000000"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="5dp"
-    android:layout_marginStart="10dp"
-    android:id="@+id/instructions"
-    android:textSize="30dp"
-    android:layout_below="@+id/instructions_title">
-    </TextView>
-</RelativeLayout>
+                <ImageView
+                    android:id="@+id/favorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/favorite_false"
+                    android:tag="favorite_false"
+                    android:visibility="invisible"
+                    android:onClick="handle_favorite_click"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/meal_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="changeTitleColor"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="180dp"
+                    android:textColor="#FFF"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:tag="no_background"/>
+
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/meal_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/image_recipe"
+            android:background="#FFF"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/ingredients_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Ingredients:"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/linear_ingredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ingredients_title"
+                android:layout_margin="10dp"
+                android:textSize="15dp"
+                android:textStyle="normal"
+                android:orientation="vertical" />
+
+            <TextView
+                android:id="@+id/instructions_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_ingredients"
+                android:layout_margin="10dp"
+                android:text="Instructions:"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/instructions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/instructions_title"
+                android:layout_margin="10dp"
+                android:textColor="#000000"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+
+        </RelativeLayout>
+
     </ScrollView>
-
 
 </RelativeLayout>

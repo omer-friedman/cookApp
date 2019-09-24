@@ -79,7 +79,12 @@ public class MainActivity extends AppCompatActivity {
             IdpResponse response = IdpResponse.fromResultIntent(data);
             if(resultCode == RESULT_OK){
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                Toast.makeText(this,""+user.getEmail(),Toast.LENGTH_SHORT).show();
+                if(user.getEmail() != null)
+                    Toast.makeText(this,""+user.getEmail(),Toast.LENGTH_SHORT).show();
+                else if(user.getPhoneNumber() != null)
+                    Toast.makeText(this,""+user.getPhoneNumber(),Toast.LENGTH_SHORT).show();
+                else
+                    Toast.makeText(this,"Hey there!!!",Toast.LENGTH_SHORT).show();
                 logout_textview.setEnabled(true );
             }
             else{

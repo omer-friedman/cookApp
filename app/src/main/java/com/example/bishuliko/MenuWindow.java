@@ -48,4 +48,9 @@ public class MenuWindow extends AppCompatActivity {
         Intent myIntent = new Intent(MenuWindow.this, SearchCategory.class);
         MenuWindow.this.startActivity(myIntent);
     }
+
+    public void display_favorites(View view) {
+        Intent myIntent = new Intent(MenuWindow.this, DisplayFavorites.class);
+        MenuWindow.this.startActivity(myIntent);
+    }
 }
