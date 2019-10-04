@@ -62,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/image_recipe"
-            android:background="#FFF"
+            android:background="@drawable/soft"
             android:layout_margin="10dp">
 
             <TextView

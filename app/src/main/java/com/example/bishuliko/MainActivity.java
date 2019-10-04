@@ -3,9 +3,11 @@ package com.example.bishuliko;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                    });
                }
         });
+
         providers = new ArrayList<AuthUI.IdpConfig>(Arrays.asList(
                 new AuthUI.IdpConfig.EmailBuilder().build(), //Email Builder
                 new AuthUI.IdpConfig.PhoneBuilder().build(), //Phone Builder
@@ -69,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
                         .setTheme(R.style.MyTheme)
                 .build(), MY_REQUEST_CODE
         );
+
 
     }
 

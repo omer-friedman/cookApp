@@ -5,8 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+    android:background="@drawable/food_back2"
     android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Welcome to Bishuliko, the ultimate cooking app\n Press on our logo to start cooking like a boss!"
+        android:textSize="34dp"
+        android:background="#ccffffff"
+        android:gravity="center"
+        android:fontFamily="@string/font_family_light"
+        android:textColor="#000000">
 
+    </TextView>
     <ImageButton
         android:id="@+id/button_menu"
         android:layout_width="wrap_content"
@@ -23,6 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Logout"
+        android:textColor="#000000"
         android:textSize="20sp"
         android:layout_below="@+id/button_menu"
         android:gravity="center"
