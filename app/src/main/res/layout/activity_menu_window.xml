@@ -13,9 +13,9 @@
         <ImageButton
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/search"
-            android:onClick="search_name"
-            android:id="@+id/search_img">
+            android:src="@drawable/categories"
+            android:onClick="search_category"
+            android:id="@+id/categories_img">
 
         </ImageButton>
 
@@ -38,12 +38,13 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_weight="1">
+
     <ImageButton
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/categories"
-        android:onClick="search_category"
-        android:id="@+id/categories_img">
+        android:src="@drawable/search"
+        android:onClick="search_name"
+        android:id="@+id/search_img">
 
     </ImageButton>
 

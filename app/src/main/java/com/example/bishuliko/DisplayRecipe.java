@@ -123,7 +123,7 @@ public class DisplayRecipe extends AppCompatActivity {
         if(favorite_on){
             try{
                 databaseReference.child("user").child(user.getUid()).child(meal_title).setValue(meal_json);
-                Toast.makeText(this, "Added to favorits", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Added to favorites", Toast.LENGTH_SHORT).show();
             }catch(Exception e){
                 Toast.makeText(this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
             }
@@ -131,7 +131,7 @@ public class DisplayRecipe extends AppCompatActivity {
         else{
             try{
                 databaseReference.child("user").child(user.getUid()).child(meal_title).removeValue();
-                Toast.makeText(this, "Removed from favorits", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Removed from favorites", Toast.LENGTH_SHORT).show();
             }catch(Exception e){
                 Toast.makeText(this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
             }
